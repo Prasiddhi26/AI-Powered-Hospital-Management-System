@@ -22,7 +22,7 @@ const genAI = new GoogleGenAI({
 // ───────────────────────────────────────────────────────────
 const generateText = async (prompt) => {
   const result = await genAI.models.generateContent({
-    model: "gemini-2.0-flash",
+    model: "gemini-3-flash-preview",
     contents: prompt,
   });
 
@@ -34,7 +34,7 @@ const generateText = async (prompt) => {
 // ───────────────────────────────────────────────────────────
 const analyzeImage = async (base64Image, mimeType, prompt) => {
   const result = await genAI.models.generateContent({
-    model: "gemini-2.0-flash",
+    model: "gemini-3-flash-preview",
     contents: [
       {
         inlineData: {
@@ -56,7 +56,7 @@ const startChatSession = (history = []) => {
   return {
     sendMessage: async (message) => {
       const result = await genAI.models.generateContent({
-        model: "gemini-2.0-flash",
+        model: "gemini-3-flash-preview",
         contents: [
           ...history,
           { role: "user", parts: [{ text: message }] },

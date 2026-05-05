@@ -11,7 +11,7 @@ const genAI = new GoogleGenAI({
  */
 const callGemini = async (prompt) => {
   const result = await genAI.models.generateContent({
-    model: "gemini-2.0-flash", // ✅ correct model
+    model: "gemini-3-flash-preview", // ✅ correct model
     contents: prompt,
   });
 
