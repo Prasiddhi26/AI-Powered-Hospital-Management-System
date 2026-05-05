@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base URL from env, fallback to localhost
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  baseURL: process.env.REACT_APP_API_URL || "https://ai-powered-hospital-management-system.onrender.com/api",
   headers: { "Content-Type": "application/json" },
 });
 
